@@ -1,0 +1,125 @@
+:root {
+    --color-black: #242A45;
+    --color-gray: #9194A2;
+    --color-olive: #5267DF;
+    --color-red: #FA5959;
+    --color-white: #F2F2F2;
+    --color-white-pure: #FFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--color-white-pure);
+    color: var(--color-black);
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid--2-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--center-v {
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 120rem;
+    padding: 0 3.2rem;
+}
+
+.heading-box {
+    max-width: 64rem;
+    text-align: center;
+}
+
+.heading-primary,
+.heading-secondary {
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.heading-primary {
+    font-size: 4.8rem;
+    line-height: 1.08;
+    letter-spacing: -0.015rem;
+}
+
+.heading-secondary {
+    font-size: 3.2rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.63;
+    margin-bottom: 2rem;
+}
+
+.description-text {
+    font-size: 1.8rem;
+    line-height: 1.56;
+    margin-bottom: 3rem;
+    opacity: .5;
+}
+
+.cta__btn,
+.btn:link,
+.btn:visited {
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: .025rem;
+    line-height: 2;
+    padding: 1rem 2rem;
+    text-decoration: none;
+
+    /* for button element */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn--color:link,
+.btn--color:visited {
+    color: var(--color-white-pure)
+}
+
+.btn--white:link,
+.btn--white:visited {
+    box-shadow: 0 0.2rem .5rem rgba(0, 0, 0, 0.2);
+    color: var(--color-black);
+    background-color: #F7F7F7;
+}
+
+.u-background-color-primary { background-color: var(--color-olive) !important; }
+
+.u-background-color-secondary { background-color: var(--color-red) !important; }
+
+.u-color-white { color: var(--color-white-pure) !important; }
+
+.u-margin-right { margin-right: 1.5rem !important;}
+
+.u-margin-left-auto {
+    margin-left: auto;
+}
+
+.u-text-align-center { text-align: center; }
