@@ -4,13 +4,15 @@
 .header {
     align-items: center;
     display: flex;
-    justify-content: space-between;
     padding-top: 6rem;
 }
 
 .nav {
-    position: relative;
-    right: 2.5rem;
+    width: 100%;
+}
+
+.nav-item--logo {
+    margin-right: auto;
 }
 
 .nav-list {
@@ -27,6 +29,14 @@
     letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color .2s;
+}
+
+.nav-link--footer:hover,
+.nav-link--footer:active, 
+.nav-link:hover,
+.nav-link:active {
+    color: var(--color-red);
 }
 
 .nav-cta:link,
@@ -34,6 +44,14 @@
     box-shadow: 0 0.2rem .5rem rgba(0, 0, 0, 0.2);
     color: var(--color-white-pure);
     padding: .7rem 3.4rem;
+    transition: all .2s;
+}
+
+.nav-cta:hover,
+.nav-cta:active {
+    color: var(--color-red);
+    background-color: transparent;
+    outline: 2px solid var(--color-red);
 }
 
 /* ************* */
@@ -147,8 +165,9 @@
 }
 
 .features__content-box {
-    left: 9rem;
-    position: relative;
+    /* position: relative;
+    left: 9rem; */
+    /* transform: translateX(9rem); */
 }
 
 /* ************* */
@@ -238,6 +257,7 @@
 
 .accordion__item {
     border-bottom: .1rem solid var(--color-gray);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
@@ -357,20 +377,17 @@
 
 .footer {
     background-color: var(--color-black);
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .container--footer {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 .logo--footer {
-    fill: var(--color-white-pure);
-}
-
-.footer__nav-link {
-    color: var(--color-white-pure);
+    /* filter: contrast(0); */
+    margin-right: 1rem;
 }
 
 .nav--footer {
@@ -379,12 +396,25 @@
 
 .nav-link--footer:link,
 .nav-link--footer:visited {
-    color: var(--color-white-pure);
+    color: var(--color-gray);
+    transition: color .2s;
 }
 
+.nav-link--footer:hover,
+.nav-link--footer:active {
+    color: var(--color-red);
+}
+
+.icon--footer,
 .icon--footer {
     display: block;
     fill: var(--color-white-pure);
     height: 3rem;
     width: 3rem;
+    transition: fill .2s;
+}
+
+.icon--footer:hover,
+.icon--footer:active {
+    fill: var(--color-red);
 }

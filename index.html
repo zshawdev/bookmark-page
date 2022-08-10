@@ -18,11 +18,13 @@
 </head>
 <body>
   <header class="header container">
-    <a href="#">
-      <img src="images/logo-bookmark.svg" alt="">
-    </a>
     <nav class="nav">
       <ul class="nav-list">
+        <li class="nav-item--logo">
+          <a href="#">
+            <img src="images/logo-bookmark.svg" alt="Bookmark logo">
+          </a>
+        </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Features</a>
         </li>
@@ -49,7 +51,7 @@
           <a href="#" class="btn btn--white">Get it on Firefox</a>
         </div>
         <div class="hero__image-box">
-          <img class="hero__image" src="images/illustration-hero.svg" alt="">
+          <img class="hero__image" src="images/illustration-hero.svg" alt="" aria-hidden=”true”>
         </div>
       </div>
     </section>
@@ -72,7 +74,8 @@
       </div>
       <div class="container grid grid--2-col grid--center-v">
         <div class="features__image-box">
-          <img class="features__image" src="images/illustration-features-tab-1.svg" alt="" id="features-image">
+          <div class=""></div>
+          <img class="features__image" src="images/illustration-features-tab-1.svg" alt="" id="features-image" aria-hidden=”true”>
         </div>
         <div class="features__content-box">
           <h3 class="heading-secondary" id="features-heading"></h1>
@@ -92,7 +95,7 @@
         <div class="card">
           <div class="card__pane-top">
             <div class="card__logo-box">
-              <img class="card__logo" src="images/logo-chrome.svg" alt="Google Chrome logo">
+              <img class="card__logo" src="images/logo-chrome.svg" alt="" aria-hidden=”true”>
             </div>
             <span class="card__heading">Add to Chrome</span>
             <span class="card__description">Minimum Version 62</span>
@@ -105,7 +108,7 @@
         <div class="card">
           <div class="card__pane-top">
             <div class="card__logo-box">
-              <img class="card__logo" src="images/logo-firefox.svg" alt="Google Chrome logo">
+              <img class="card__logo" src="images/logo-firefox.svg" alt="" aria-hidden=”true”>
             </div>
             <span class="card__heading">Add to Firefox</span>
             <span class="card__description">Minimum Version 55</span>
@@ -118,7 +121,7 @@
         <div class="card">
           <div class="card__pane-top">
             <div class="card__logo-box">
-              <img class="card__logo" src="images/logo-opera.svg" alt="Google Chrome logo">
+              <img class="card__logo" src="images/logo-opera.svg" alt="" aria-hidden=”true”>
             </div>
             <span class="card__heading">Add to Opera</span>
             <span class="card__description">Minimum Version 46</span>
@@ -157,7 +160,7 @@
           <div class="accordion__item">
             <div class="accordion__heading-box">
               <span class="accordion__heading">How can I request a new browser?</span>
-              <svg class="accordion__icon">
+              <svg class="accordion__icon" alt="" aria-hidden=”true”>
                 <use xlink:href="images/sprite.svg#icon-chevron-down"></use>
               </svg>
             </div>
@@ -172,7 +175,7 @@
           <div class="accordion__item">
             <div class="accordion__heading-box">
               <span class="accordion__heading">Is there a mobile app?</span>
-              <svg class="accordion__icon">
+              <svg class="accordion__icon" alt="" aria-hidden=”true”>
                 <use xlink:href="images/sprite.svg#icon-chevron-down"></use>
               </svg>
             </div>
@@ -187,7 +190,7 @@
           <div class="accordion__item">
             <div class="accordion__heading-box">
               <span class="accordion__heading">What about other Chromium browsers?</span>
-              <svg class="accordion__icon">
+              <svg class="accordion__icon" alt="" aria-hidden=”true”>
                 <use xlink:href="images/sprite.svg#icon-chevron-down"></use>
               </svg>
             </div>
@@ -207,33 +210,35 @@
     <section class="section-cta">
       <div class="cta__content">
         <div class="heading-box cta__heading-box">
-          <span class="cta__subheading">35,000+ ALREADY JOINED</span>
+          <span class="cta__subheading">35,000+ already joined</span>
           <h2 class="heading-secondary">
             Stay up-to-date with what we’re doing
           </h2>
         </div>
-        <div class="cta__contact-us">
+        <form class="cta__contact-us">
           <input class="cta__email-input" type="email" placeholder="Enter your email address" required>
           <button class="cta__btn btn btn--color u-background-color-secondary">Contact Us</button>
-        </div>
+        </form>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container container--footer">
-      <a href="#">
-        <img class="logo--footer" src="images/logo-bookmark.svg" alt="">
-      </a>
       <nav class="nav nav--footer">
         <ul class="nav-list footer__nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link nav-link--footer">FEATURES</a>
+            <a href="#">
+              <img class="logo--footer" src="images/logo-bookmark.svg" alt="Bookmark logo">
+            </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-link--footer">PRICING</a>
+            <a href="#" class="nav-link nav-link--footer">Features</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-link--footer">CONTACT</a>
+            <a href="#" class="nav-link nav-link--footer">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-link--footer">Contact</a>
           </li>
           <li class="nav-item u-margin-left-auto">
             <a href="#" class="nav-link nav-link--footer">

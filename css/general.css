@@ -100,7 +100,9 @@ body {
 
 .btn--color:link,
 .btn--color:visited {
-    color: var(--color-white-pure)
+    color: var(--color-white-pure);
+    outline: 2px solid transparent;
+    transition: all .2s;
 }
 
 .btn--white:link,
@@ -108,15 +110,26 @@ body {
     box-shadow: 0 0.2rem .5rem rgba(0, 0, 0, 0.2);
     color: var(--color-black);
     background-color: #F7F7F7;
+    transition: all .2s;
+    outline: 2px solid transparent;
 }
 
-.u-background-color-primary { background-color: var(--color-olive) !important; }
+.btn--color:hover,
+.btn--color:active,
+.btn--white:hover,
+.btn--white:active {
+    color: var(--color-olive);
+    background-color: transparent;
+    outline: 2px solid var(--color-olive);
+}
 
-.u-background-color-secondary { background-color: var(--color-red) !important; }
+.u-background-color-primary { background-color: var(--color-olive); }
 
-.u-color-white { color: var(--color-white-pure) !important; }
+.u-background-color-secondary { background-color: var(--color-red); }
 
-.u-margin-right { margin-right: 1.5rem !important;}
+.u-color-white { color: var(--color-white-pure); }
+
+.u-margin-right { margin-right: 1.5rem;}
 
 .u-margin-left-auto {
     margin-left: auto;
