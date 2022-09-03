@@ -120,7 +120,7 @@ body {
 .btn--white:active {
     color: var(--color-olive);
     background-color: transparent;
-    outline: 2px solid var(--color-olive);
+    outline: 2px solid currentColor;
 }
 
 .u-background-color-primary { background-color: var(--color-olive); }

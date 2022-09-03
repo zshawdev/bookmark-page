@@ -1,5 +1,5 @@
 /* ************* */
-/* HERO SECTION */
+/* HEADER SECTION */
 /* ************* */
 .header {
     align-items: center;
@@ -51,7 +51,7 @@
 .nav-cta:active {
     color: var(--color-red);
     background-color: transparent;
-    outline: 2px solid var(--color-red);
+    outline: 2px solid currentColor;
 }
 
 /* ************* */
@@ -226,17 +226,17 @@
     opacity: 50%;
 }
 
-.card__link {
-    margin-top: 6rem;
-    position: relative;
-}
-
 .card__pane-bottom {
     background-image: url(../images/bg-dots.svg);
     background-position-y: 3.5rem;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
+}
+
+.card__link {
+    margin-top: 6rem;
+    position: relative;
 }
 
 
@@ -348,23 +348,85 @@
 
 .cta__btn {
     color: var(--color-white-pure);
+    outline: 2px solid transparent;
+    transition: all .2s; 
+}
+
+.cta__btn:hover,
+.cta__btn:active {
+    color: var(--color-red);
+    background-color: var(--color-white-pure);
+    outline: 2px solid currentColor;
+}
+
+.cta__email-box {
+    display: flex;
+    flex-basis: 69%;
+    border-radius: 0.6rem;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .cta__email-input {
     border: none;
-    border-radius: 0.6rem;
-    flex-basis: 69%;
+    border-radius: inherit;
+    color: var(--color-gray);
     padding: 1rem 0rem;
     padding-left: 1rem;
+    width: 100%;
+
+    position: relative;
+    z-index: 1;
+}
+
+.cta__email-input:focus:invalid::after {
+    content: "Whoops, make sure it's a valid email.";
+    font-style: italic;
+    border-radius: inherit;
+    background-color: var(--color-red);
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+    position: absolute;
+    top: -5%;
+    height: 8rem;
+    width: auto;
+    left: -0.3rem;
+    right: -0.3rem;
+}
+
+.cta__error {
+    height: 3rem;
+    width: 3rem;
+}
+
+/* .cta__email-box::after {
+    content: "Whoops, make sure it's a valid email.";
+    font-style: italic;
+    border-radius: inherit;
+    background-color: var(--color-red);
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+    position: absolute;
+    top: -5%;
+    height: 8rem;
+    width: auto;
+    left: -0.3rem;
+    right: -0.3rem;
+} */
+
+.cta__email-input:focus:valid {
+    outline: 3px solid rgb(97, 238, 97);
 }
 
 .cta__email-input::placeholder {
-    color: var(--color-gray);
+    color: currentColor;
     opacity: 50%;
 }
 
 .cta__email-input::-webkit-input-placeholder {
-    color: var(--color-gray);
+    color: currentColor;
 }
 
 .cta__email-input:focus {
@@ -396,7 +458,7 @@
 
 .nav-link--footer:link,
 .nav-link--footer:visited {
-    color: var(--color-gray);
+    color: var(--color-white-pure);
     transition: color .2s;
 }
 
